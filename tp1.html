@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP sécurité systeme</title>
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid p-3 mb-2 bg-info text-black">
+    <p class="display-5 text-center">Chiffrement de César</p>
+  </div>
+  <div class="containerA">
+    <div class="container">
+      <div class="info">
+
+        Pour crypter ou décrypter, le texte saisi subira les
+        règles suivantes pour chaque caractère :
+
+
+        <ul>
+          <li>
+            S'il s'agit d'une lettre, elle sera remplacer par une lettre de
+            la même casse (majuscule ou minuscule).</li>
+          <li>S'il s'agit d'un espace, il sera conservez.</li>
+          <li>S'il s'agit d'autre chose( caractère, chiffre, accent), il n'apparaît dans
+            la sortie.</li>
+          <li>Le code doit être un entier compris entre 1 et 25</li>
+        </ul>
+        Par exemple, si nous avions les alphabets ci-dessous (le code est 16) : <br>
+        l'alphabet en clair : ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>
+        alphabet chiffré : KLMNOPQRSTUVWXYZABCDEFGHIJ <br>
+        Et ils ont entré "Writing code is,!;~;;?5555 Cool", nous obtenons "Gbsdsxq myno sc
+        Myyv" comme résultat, car nous préservons les espaces, mais en supprimant tout autre
+        caractère non trouvé dans l'alphabet.
+
+      </div>
+
+      <div class="bg-danger col-12" role="alert">
+        <p id="demo" class="text-center fs-5"></p>
+      </div>
+
+
+      <form class="row g-3" name="form">
+
+        <div class="col-md-12">
+          <label for="inputAddress" class="form-label text-white bg-dark">Message</label>
+          <textarea type="text" class="form-control" id="inputAddress" placeholder="Votre message" name="saisie"
+            cols="30" rows="5"> </textarea>
+        </div>
+        <div class="col-md-12">
+          <label for="inputAddress" class="form-label text-white bg-dark">Code</label>
+          <input type="number" min="1" max="25" class="form-control" id="inputNumber" name="code"
+            placeholder="code compris entre 1 et 25">
+        </div>
+
+        <div class="col-md-12">
+          <input class="btn btn-primary" type="button" onClick="Crypter(this.form)" value="Crypter">
+          <input class="btn btn-secondary m-3" type="button" onClick="Decrypter(this.form)" value="Decrypter">
+          <input class="btn btn-danger" type="button" onClick="Reinitialiser(this.form)" value="Réinitialiser">
+        </div>
+
+        <!--<div class="col-12">
+            <label for="inputAddress" class="form-label">Message</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="output">
+          </div>
+        -->
+        <div class="message bg-white col-12 text-black">
+          <h1 id="outputTitre" class="text-center"></h1>
+          <hr>
+          <div class="text-center">
+            <span id="output"></span>
+          </div>
+        </div>
+        <div class="foot"></div>
+      </form>
+    </div>
+  </div>
+</body>
+<footer>
+  <div class="copyright-section">
+      
+    <p class="copyright text-white">Copyright &copy; DAMA Theodore @ Master1 UJKZ Décembre 2020  </p>
+    
+  </div>
+</footer>
+
+</html>

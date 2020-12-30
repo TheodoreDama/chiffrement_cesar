@@ -1,0 +1,52 @@
+
+.container{
+    margin: 20px;
+    /*padding: 100px;*/
+    justify-content: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerA{
+    
+    /*min-height: 500px;*/
+    /*background-image: url("cryptography.jpg");*/
+}
+
+.message{
+    /*min-height: 600px;*/
+}
+
+.info{
+    
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: rgb(235, 241, 228);
+   padding-left: 10px;
+    
+}
+
+.foot{
+    min-height: 10px;
+}
+
+
+.copyright-section{
+    background-color: rgb(61, 61, 58);/* #ff9307;*/
+    font-weight: inherit;
+    height: 60px;
+    
+  
+  }
+  .copyright{
+    height: 60px;
+    text-align: center;
+    padding-top: 20px;
+  
+  
+  }
+
+  body{
+      background-color:rgb(241, 241, 241);/* rgb(226, 231, 235);*/
+  }
